@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import Home from "@/components/Home";
 import Login from "@/components/Login";
 import NotFound from "@/components/NotFound";
+import Register from "@/components/Register";
+import PasswordReset from "@/components/PasswordReset";
 
 Vue.use(Router);
 
@@ -26,8 +28,28 @@ const router = new Router({
             meta: {
                 title: 'Azortis - Login',
                 navBar: false,
-                footer: true
+                footer: false
             }
+        },
+        {
+            path: '/register',
+            name: 'Register',
+            component: Register,
+            meta: {
+                title: 'Azortis - Login',
+                navBar: false,
+                footer: false
+            }
+        },
+        {
+            path: '/password-reset/:token',
+            name: 'Password Reset',
+            component: PasswordReset,
+            meta: {
+                title: 'Azortis - Password Reset',
+                navBar: false,
+                footer: false
+          }
         },
         {
             path: '*',
